@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃01</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(227, 197, 255);
+      }
+      #contaienr {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      #header {
+        width: 100%;
+        height: 100px;
+        background-color: #ffb1b1;
+      }
+      #nav {
+        width: 100%;
+        height: 100px;
+        background-color: #ff569d;
+      }
+      #aside {
+        width: 33.333%;
+        height: 780px;
+        background-color: #cbff3c;
+        float: left;
+      }
+      #section {
+        width: 66.666%;
+        height: 780px;
+        background-color: #72ff95;
+        float: left;
+      }
+      #footer {
+        width: 100%;
+        height: 100px;
+        background-color: #5078ff;
+        clear: both;
+      }
+
+      /* 미디어 쿼리 */
+      /* 데스크탑 노트북 */
+      @media (max-width: 1300px) {
+        #container {
+          width: 90%;
+        }
+      }
+
+      /* 태블릿 */
+      @media (max-width: 786px) {
+        #container {
+          width: 100%;
+        }
+      }
+
+      /* 모바일 */
+      @media (max-width: 480px) {
+        #aside {
+          width: 100%;
+          height: 300px;
+        }
+        #section {
+          width: 100%;
+          height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header id="header"></header>
+      <nav id="nav"></nav>
+      <aside id="aside"></aside>
+      <section id="section"></section>
+      <footer id="footer"></footer>
+    </div>
+    <!-- float 레이아웃 -->
+    <!-- 
+                        내 width값 
+      내 width값의  %   ----------  *100
+                      컨테이너 width값
+     -->
+  </body>
+</html>
